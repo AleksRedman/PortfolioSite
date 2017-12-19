@@ -3,7 +3,7 @@
 module.exports = function() {
   $.gulp.task('pug', function() {
     return $.gulp.src('./source/template/pages/*.pug')
-      .pipe($.gp.pug({ pretty: \t }))
+      .pipe($.gp.pug({ pretty: '\t' }))
       .on('error', $.gp.notify.onError(function(error) {
         return {
           title: 'Pug',
