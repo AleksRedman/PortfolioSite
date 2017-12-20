@@ -9,6 +9,7 @@ global.$ = {
     cssFoundation: require('./gulp/paths/css.foundation.js'),
     app: require('./gulp/paths/app.js')
   },
+  fs: require('fs'),
   gulp: require('gulp'),
   del: require('del'),
   browserSync: require('browser-sync').create(),
