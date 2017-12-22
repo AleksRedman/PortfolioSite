@@ -9,5 +9,7 @@
     {
       "Backend" : ["Git", "Gulp"]
     }
-  ]
+  ],
+  
+  "socials" : ["vk", "gh", "in"]
 }
