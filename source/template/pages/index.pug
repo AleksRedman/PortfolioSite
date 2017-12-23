@@ -53,6 +53,7 @@ block content
     section.conteiner.map
       .contact-box
         .contact-box__title.subtitle
+          | Контакты
         .contact-box__wrap
             .contact-box__item
               a.contact-box__links.contact-box__links--sk(href="skype:aleksredman?call") aleksredman
@@ -67,7 +68,7 @@ block content
           .footer__about
             p Лорем ипсум долор сит амет, но пер лаореет медиоцрем, ех сед цетеро яуаерендум, цоммодо мелиоре вис те.
           .footer__nav_soc
-            .nav
+            +nav('nav', navigation, 0 )
             include ../sections/_socials.pug
           ul.footer__contacts-wrap
             a.footer__contacts(href="skype:aleksredman?call")
