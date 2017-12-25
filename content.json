@@ -7,7 +7,7 @@
       "Backend" : ["PHP", "mySQL", "Nodejs & npm", "Mongo.db"]
     },
     {
-      "Backend" : ["Git", "Gulp"]
+      "WorkFlow" : ["Git", "Gulp"]
     }
   ]
 }
