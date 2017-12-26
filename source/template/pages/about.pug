@@ -1,0 +1,58 @@
+extends ../_template
+
+block pageTitle
+  title indexPage
+
+block content
+  .wrapper
+    section.conteiner.hero
+      .hero__wrapper
+        .hero__header
+          include ../sections/_socials.pug
+
+          a(href = "#").toggle
+        .hero__user-box
+        
+          include ../sections/_userBox.pug
+        
+        a(href = "#").arrow_down
+    section.conteiner.about
+      .about__left
+        svg.triangle.triangle--fill-beige
+        h1.title.about__title
+          | Обо мне
+        .user-about
+          .user_about__picture
+          h2.user_about__title.subtitle
+            | Кто я
+          .user_about__text
+            p Я начинающий веб разработчик из Херсона. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+            p Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.
+          
+      .about__right
+        svg.triangle.triangle--fill-white
+        .about-data
+          .about-data__deskr
+            h2.subtitle
+              | Чем я могу быть вам полезен
+            p.about-data__text
+              | Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+          .about-data__content
+            ul.skills
+              each skill in skills
+                each skillsArray, skillName in skill
+                  li.skills__item
+                    .skill-section
+                      .skill-section__title= skillName
+                      ul.skill-section__list
+                        each skillTitle in skillsArray
+                          li.skills-section__item
+                            .skill
+                              svg.skill__circle
+                              .skill__name= skillTitle
+    section.conteiner.map
+      .contact-box
+        .contact-box__title.subtitle
+          | Контакты
+        +contacts('contacts', contacts )
+      include ../sections/_footer.pug
