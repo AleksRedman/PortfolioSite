@@ -1,0 +1,53 @@
+extends ../_template
+
+block pageTitle
+  title My worcks
+
+block content
+  .wrapper
+    section.conteiner.hero
+      .hero__wrapper
+        .hero__header
+          include ../sections/_socials.pug
+
+          a(href = "#").toggle
+        .hero__user-box
+        
+          include ../sections/_userBox.pug
+        
+        a(href = "#").arrow.arrow--down
+        .hero__footer
+          .hero__footer-head
+            svg.triangle.triangle--fill-black
+            svg.triangle.triangle--fill-black
+          .hero__title-wrap
+            h1.section-title Мои работы
+    section.conteiner.works
+      .works__wraper
+        .works__data
+          .works__descr-card
+            h2.works__title.subtitle Сайт школы онлайн образования
+            p.works__technologies HTML, CSS, JAVASCRIPT
+            a.works__watch-button(href = "#" target = "_blank") Посмотреть сайт
+        .works__gallery
+          .gallery
+            .gallery__preview
+              img(src = "#" alt = "Gallery img")
+            .gallery__controls
+              .gallery__button.gallery__button--prev
+                a(href = "#").arrow.arrow--down
+              .gallery__button.gallery__button--next
+                a(href = "#").arrow.arrow--up
+    section.conteiner.feedback
+      .feedback__wrapper
+        h2.section-title Обратная связь со мной
+        .feedback-form
+          h2.feedback-form__title.subtitle
+          form.feedback-form__list(name="feedback" method="post" action="#")
+            input.feedback-form__item( type= "text" name = "name" placeholder = "Ваше имя")
+            input.feedback-form__item( type= "email" name = "email" placeholder = "Ваш email")
+            textarea.feedback-form__item.feedback-form__item--textarea(name = "message" placeholder = "Ваше сообщение")
+            .feedback-form__buttons
+              button(type = "submit") Отправить
+              button(type = "reset") Очистить
+        include ../sections/_footer.pug    
