@@ -7,15 +7,15 @@ block content
   .wrapper
     section.conteiner.hero
       .hero__wrapper
-      
-        include ../sections/_socials.pug
-        
-        a(href = "#").toggle
-        a(href = "#").arrow_down
-        .hero__title
+        .hero__header
+          include ../sections/_socials.pug
+
+          a(href = "#").toggle
+        .hero__user-box
         
           include ../sections/_userBox.pug
-          
+        
+        a(href = "#").arrow_down
     section.conteiner.about
       .about__left
         svg.triangle.triangle--fill-beige
@@ -55,15 +55,4 @@ block content
         .contact-box__title.subtitle
           | Контакты
         +contacts('contacts', contacts )
-      .footer
-        .footer__data
-          .footer__section
-            p Лорем ипсум долор сит амет, но пер лаореет медиоцрем, ех сед цетеро яуаерендум, цоммодо мелиоре вис те.
-          .footer__section
-            +nav('nav', navigation, 0 )
-            include ../sections/_socials.pug
-          .footer__section
-            +contacts('footerContacts', contacts )
-        .footer__bottom
-          .footer__copyrights
-            p &copy; Алексей Патрушев | 2017-2018
+      include ../sections/_footer.pug
