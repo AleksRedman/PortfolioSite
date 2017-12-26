@@ -1,0 +1,16 @@
+extends ../_template
+
+block pageTitle
+  title Welcome
+
+block content
+  .wrapper
+    section.conteiner.hero
+      .hero__wrapper
+        .hero__header
+          a(href = "#").hero__authorization
+        .user-card
+          include ../sections/_userBox.pug
+          include ../sections/_socials.pug
+          +nav('welcome-nav', navigation, 2, 3)
+        include ../sections/_copyright.pug
