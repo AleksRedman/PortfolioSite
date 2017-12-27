@@ -8,9 +8,9 @@ block content
     section.conteiner.hero
       .hero__wrapper
         .hero__header
-          a.hero__authorization(href = "#") Авторизоваться
+          a.hero__authorization(href = "./authorization.html") Авторизоваться
         .user-card
           include ../sections/_userBox.pug
           include ../sections/_socials.pug
-          +nav('welcome-nav', navigation, 2, 3)
+          +nav('user-card-nav', navigation, 2, 3, 'user-card__btn')
         include ../sections/_copyright.pug

@@ -40,7 +40,7 @@ block content
         h2.section-title Обратная связь со мной
         .feedback-form
           h2.feedback-form__title.subtitle
-          form.feedback-form__list(name="feedback" method="post" action="#")
+          form.feedback-form__wrap(name="feedback" method="post" action="#")
             input.feedback-form__item( type= "text" name = "name" placeholder = "Ваше имя")
             input.feedback-form__item( type= "email" name = "email" placeholder = "Ваш email")
             textarea.feedback-form__item.feedback-form__item--textarea(name = "message" placeholder = "Ваше сообщение")
