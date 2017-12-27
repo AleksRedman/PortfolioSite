@@ -5,7 +5,7 @@ block pageTitle
 
 block content
   .wrapper
-    section.conteiner.hero
+    section.container.hero
       .hero__wrapper
         .hero__header
           include ../sections/_socials.pug
@@ -20,3 +20,13 @@ block content
           .hero__footer-head
             svg.triangle.triangle--fill-white
             svg.triangle.triangle--fill-white
+    section.container.blog
+      .blog__wrapper
+        aside.blog__nav
+          ul.blog__list
+            li.blog__items
+              a.blog__links
+        main.blog__content
+          article.
+    section.container
+      include ../sections/_footer.pug
