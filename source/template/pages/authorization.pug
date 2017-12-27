@@ -1,0 +1,33 @@
+extends ../_template
+
+block pageTitle
+  title Autorization
+
+block content
+  .wrapper
+    section.conteiner.hero
+      .hero__wrapper
+        .user-card
+          .check-form
+            h1.check-form__title
+            form.check-form__wrap(name="authorization" method="post" action="#")
+              input(type = "text" name = "login" placeholder = "Логин")
+              input(type = "password" name = "password" placeholder = "Логин")
+              label.custom-checkbox
+                input(type ="checkbox" name = "humanTest")
+                span.custom-checkbox__button
+                | Я человек
+              p Вы точно не робот?
+              .check-form__radio-wrap
+                label.custom-radio
+                  input(type ="radio" name = "sure" value="sure")
+                  span.custom-radio__button
+                  | Да
+                label.custom-radio
+                  input(type ="radio" name = "sure" value="not-sure")
+                  span.custom-radio__button
+                  | Не уверен
+              .check-form__button-wrap
+                a.user-card__button(href ="./index.html" type = "button") На главную
+                button.user-card__button(type = "submit") Войти
+        include ../sections/_copyright.pug
