@@ -25,8 +25,8 @@ block content
         aside.blog__nav
           ul.blog__list
             li.blog__items
-              a.blog__links
+              a.blog__links(href = "#")
         main.blog__content
-          article.
+          +articles('articles', articles)
     section.container
       include ../sections/_footer.pug
