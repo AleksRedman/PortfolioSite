@@ -1,6 +1,6 @@
 //-___________________NAVIGATION________________
-//1-Класс, 2-Массив, 3-Активный пункт, 4-Лишний элемент, 5-Дополнительный класс
-//
+//-1-Класс, 2-Массив, 3-Активный пункт, 4-Лишний элемент, 5-Дополнительный класс
+//-
 mixin nav(className, items, activeItem, excessItem, additionalClass)
   nav(class=`${className}`)
     ul(class=`${className}__list`)
@@ -13,10 +13,25 @@ mixin nav(className, items, activeItem, excessItem, additionalClass)
 
 
 //-___________________CONTACTS________________
-//
-//
+//-
+//-
 mixin contacts(className, items)
   ul(class=`${className}`)
     each item in items
       li(class=`${className}__item`)
         a(class=`${className}__link  ${className}__link--${item.class}` href=`${item.link}` target = "_blank")= item.item
+
+
+
+//-___________________ARTICLES________________
+//-
+//-
+mixin articles(className, items)
+  div(class=`${className}`)
+    for key in items
+      article(class=`${className}__wrap`)
+        h3(class=`${className}__title` id = `${key.id}`)= key.title
+        time(class=`${className}__date` datetime=`${key.simanticDate}`)= key.date
+        div(class=`${className}__text`)!= `${key.text}`
+            
+            
