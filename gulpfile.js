@@ -3,17 +3,18 @@
 global.$ = {
   package: require('./package.json'),
   config: require('./gulp/config'),
-  path: {
-    task: require('./gulp/paths/tasks.js'),
-    jsFoundation: require('./gulp/paths/js.foundation.js'),
-    cssFoundation: require('./gulp/paths/css.foundation.js'),
-    app: require('./gulp/paths/app.js')
-  },
-  fs: require('fs'),
   gulp: require('gulp'),
   del: require('del'),
+  buf: require('vinyl-buffer'),
+  merge:require('merge-stream'),
   browserSync: require('browser-sync').create(),
-  gp: require('gulp-load-plugins')()
+  gp: require('gulp-load-plugins')(),
+  path: {
+      task: require('./gulp/paths/tasks.js'),
+      jsFoundation: require('./gulp/paths/js.foundation.js'),
+      cssFoundation: require('./gulp/paths/css.foundation.js'),
+      app: require('./gulp/paths/app.js')
+  }
 };
 
 $.path.task.forEach(function(taskPath) {
@@ -23,13 +24,19 @@ $.path.task.forEach(function(taskPath) {
 $.gulp.task('default', $.gulp.series(
   'clean',
   $.gulp.parallel(
-    'sass',
-    'pug',
-    'js:foundation',
-    'js:process',
-    'copy:image',
-    'css:foundation',
+    'sprite:img',
     'sprite:svg'
+  ),
+  $.gulp.parallel(
+    'pug',
+    'sass',
+    'css:foundation',
+    'js:foundation',
+    'js:process'
+  ),
+  $.gulp.parallel(
+    'copy:image',
+    'copy:fonts'
   ),
   $.gulp.parallel(
     'watch',
