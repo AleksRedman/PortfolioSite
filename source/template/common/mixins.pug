@@ -23,7 +23,7 @@ mixin socials(modificator, items)
   ul.socials
     each item in items
       li.socials__item
-        a(href = `${item.link}` target = "_blank" class = `socials__link  socials__link_${item.network}`)= item.network
+        a.text-hide(href = `${item.link}` target = "_blank" class = `socials__link  socials__link_${item.network}`)= item.network
           if(modificator == 'basic')
             svg(class = `socials__icon  socials__icon--${item.network}`)  
               use(xlink:href=`assets/img/sprite.svg#${item.id}`)
