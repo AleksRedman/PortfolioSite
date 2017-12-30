@@ -1,4 +1,4 @@
-extends ../_template
+extends ../_template.pug
 
 block pageTitle
   title About me
@@ -8,7 +8,7 @@ block content
     section.container.hero
       .hero__wrapper
         .hero__header
-          include ../sections/_socials.pug
+          +socials('basic', socials)
           a(href = "#").toggle
         .hero__user-box
           include ../sections/_userBox.pug

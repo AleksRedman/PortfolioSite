@@ -1,4 +1,4 @@
-extends ../_template
+extends ../_template.pug
 
 block pageTitle
   title Welcome
@@ -11,6 +11,6 @@ block content
           a.hero__authorization(href = "./authorization.html") Авторизоваться
         .user-card
           include ../sections/_userBox.pug
-          include ../sections/_socials.pug
+          +socials('round', socials)
           +nav('user-card-nav', navigation, 2, 3, 'user-card__btn')
         include ../sections/_copyright.pug
