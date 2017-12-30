@@ -1,6 +1,7 @@
 //-___________________NAVIGATION________________
 //-1-Класс, 2-Массив, 3-Активный пункт, 4-Лишний элемент, 5-Дополнительный класс
 //-
+//-
 mixin nav(className, items, activeItem, excessItem, additionalClass)
   nav(class=`${className}`)
     ul(class=`${className}__list`)
@@ -10,6 +11,25 @@ mixin nav(className, items, activeItem, excessItem, additionalClass)
             a(class=`${additionalClass}` + ` ${className}__link` href=`${item.link}`)= item.item
         else 
           breack
+
+
+
+//-___________________SOCIALS________________
+//-Значения задаются в common/vars.pug
+//-Модификаторы: basic; round;
+//-
+//-
+mixin socials(modificator, items)
+  ul.socials
+    each item in items
+      li.socials__item
+        a(href = `${item.link}` target = "_blank" class = `socials__link  socials__link_${item.network}`)= item.network
+          if(modificator == 'basic')
+            svg(class = `socials__icon  socials__icon--${item.network}`)  
+              use(xlink:href=`assets/img/sprite.svg#${item.id}`)
+          else if(modificator == 'round')
+              svg(class = `socials__icon  socials__icon--${modificator}_` + `${item.network}`)
+                use(xlink:href=`assets/img/sprite.svg#${item.id}_round`)
 
 
 //-___________________CONTACTS________________
@@ -33,5 +53,12 @@ mixin articles(className, items)
         h3(class=`${className}__title` id = `${key.id}`)= key.title
         time(class=`${className}__date` datetime=`${key.simanticDate}`)= key.date
         div(class=`${className}__text`)!= `${key.text}`
-            
-            
+
+
+
+//-___________________SVG________________
+//-
+//-
+mixin svg(addClass, addId)
+  svg(class=addClass)
+    use(xlink:href=`assets/img/sprite.svg#${addId}`)
