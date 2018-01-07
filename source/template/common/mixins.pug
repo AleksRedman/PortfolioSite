@@ -28,7 +28,7 @@ mixin socials(modificator, items)
             svg(class = `socials__icon  socials__icon--${item.network}`)  
               use(xlink:href=`assets/img/sprite.svg#${item.id}`)
           else if(modificator == 'round')
-              svg(class = `socials__icon  socials__icon--${modificator}_` + `${item.network}`)
+              svg(class = `socials__icon  socials__icon-round  socials__icon--${modificator}_` + `${item.network}`)
                 use(xlink:href=`assets/img/sprite.svg#${item.id}_round`)
 
 
