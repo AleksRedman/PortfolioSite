@@ -2,11 +2,22 @@
 //
 //
 @import "global/_fonts.scss";
+@import "global/_vars.scss";
 @import "global/_setups.scss";
 @import "global/_hidden.scss";
+
+
+//------------------common----------------------
+//
+//
+@import "common/_container.scss";
+
 
 
 //------------------SECTIONS----------------------
 //
 //
 @import "sections/_hero.scss";
+@import "sections/_socials.scss";
+@import "sections/_user.scss";
+@import "sections/_user_card.scss";
