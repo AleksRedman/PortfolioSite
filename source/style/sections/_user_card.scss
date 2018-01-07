@@ -1,0 +1,8 @@
+.user-card {
+  width: 380px;
+  background-color: transparentize($color-bg-opasity, .4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
