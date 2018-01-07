@@ -1,0 +1,29 @@
+.hero{
+  
+  &__wrapper{
+    background-image: url(../img/bg_hero.png);
+    background-color: $color-hero-bg;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  &__header{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  &__authorization{
+    padding-right: 28px;
+    padding-left: 28px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 2px solid #fff;
+    color: #fff;
+  }
+}
