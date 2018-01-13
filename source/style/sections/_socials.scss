@@ -10,10 +10,10 @@
   &__icon{
     width: 20px;
     height: 20px;
-    fill: #fff;
-  }
-  
-  &__icon-round{
+    fill: $color-main;
     
+    &:hover{
+      fill: $color-socials-user-block;
+    }
   }
 }

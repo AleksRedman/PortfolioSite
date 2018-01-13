@@ -1,4 +1,6 @@
 .user{
+  text-align: center;
+  color: $color-main;
   
   &__photo{
     border-radius: 50%;
@@ -8,13 +10,21 @@
     background-repeat: no-repeat;
     background-position: 100% 60%;
     background-size: 100%;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 15px;
   }
   
   &__name{
-    
+    font-family: $ff-main;
+    margin-bottom: 5px;
+    font-size: 28px;
   }
   
   &__descr{
-    
+    font-family: $ff-main;
+    margin-bottom: 25px;
+    font-size: 16px;
+    color: $color-main; 
   }
 }
