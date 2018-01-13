@@ -5,29 +5,43 @@ block pageTitle
 
 block content
   .wrapper
-    section.conteiner.hero
-      .hero__wrapper
-        .user-card
-          .check-form
-            h1.check-form__title
-            form.check-form__wrap(name="authorization" method="post" action="#")
-              input(type = "text" name = "login" placeholder = "Логин")
-              input(type = "password" name = "password" placeholder = "Логин")
-              label.custom-checkbox
+    section.container.hero
+      .hero__wrapper.hero__wrapper--login
+        .hero__header
+          +socials('basic', socials)
+        .user-card.user-card--login
+          form.check-form(name="authorization" method="post" action="#")
+            .check-form__wrap
+              h1.check-form__title
+                | Авторизуйтесь
+              label.check-form__field-wrap
+                span.check-form__icon-wrap
+                  svg.check-form__icon
+                    use(xlink:href = `assets/img/sprite.svg#login`)
+                input.check-form__field(type = "text" name = "login" placeholder = "Логин")
+              label.check-form__field-wrap
+                span.check-form__icon-wrap
+                  svg.check-form__icon
+                    use(xlink:href = `assets/img/sprite.svg#password`)
+                input.check-form__field(type = "password" name = "password" placeholder = "Пароль")
+              label.check-form__checkbox
                 input(type ="checkbox" name = "humanTest")
-                span.custom-checkbox__button
+                span.check-form__checkbox-btn
                 | Я человек
               p Вы точно не робот?
               .check-form__radio-wrap
-                label.custom-radio
+                label.check-form__radio
                   input(type ="radio" name = "sure" value="sure")
-                  span.custom-radio__button
+                  span.check-form__radio-btn
                   | Да
-                label.custom-radio
+                label.check-form__radio
                   input(type ="radio" name = "sure" value="not-sure")
-                  span.custom-radio__button
+                  span.check-form__radio__btn
                   | Не уверен
-              .check-form__button-wrap
-                a.user-card__button(href ="./index.html" type = "button") На главную
-                button.user-card__button(type = "submit") Войти
+            .user-card-nav
+              ul.user-card-nav__list
+                li.user-card-nav__item
+                  a.user-card-nav__link(href ="./index.html") На главную
+                li.user-card-nav__item
+                  button.user-card-nav__link(type = "submit") Войти
         include ../sections/_copyright.pug

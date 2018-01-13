@@ -1,16 +1,15 @@
 //-___________________NAVIGATION________________
-//-1-Класс, 2-Массив, 3-Активный пункт, 4-Лишний элемент, 5-Дополнительный класс
+//-1-Класс, 2-Массив, 3-Активный пункт, 4-Лишний элемент
 //-
 //-
-mixin nav(className, items, activeItem, excessItem, additionalClass)
+mixin nav(className, items, activeItem, excessItem)
   nav(class=`${className}`)
     ul(class=`${className}__list`)
       each item, ndx in items
         if (ndx !== excessItem)
           li(class=`${className}__item` + ( (ndx === activItem ) ? `${className}__item-active` : '' ))
-            a(class=`${additionalClass}` + ` ${className}__link` href=`${item.link}`)= item.item
-        else 
-          breack
+            a(class=`${className}__link` href=`${item.link}`)= item.item
+        
 
 
 
