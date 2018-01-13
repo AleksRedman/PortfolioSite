@@ -1,0 +1,72 @@
+.check-form{
+  color: $color-main;
+  width: 100%;
+  font-family: $ff-main;
+  
+  &__title{
+    text-transform: uppercase;
+    font-family: $ff-main-titles;
+    font-size: 35px;
+    margin-bottom: 35px;
+  }
+  
+  &__wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    align-items: stretch;
+    text-align: center;
+  }
+  
+  &__field-wrap{
+    margin-bottom: 20px;
+    display: flex;
+  }
+  
+  &__field{
+    padding-left: 20px;
+    padding-right: 20px;
+    flex-grow: 1;
+    border: none;
+    outline: none;
+  }
+  
+  &__icon-wrap{
+    display: inline-block;
+    height: 45px;
+    width: 45px;
+    background-color: $color-form-input;
+    position: relative;
+  }
+  
+  &__icon{
+    position: absolute;
+    fill: #bbc5c8;
+    width: 16px;
+    height: 16px;
+    top: 15px;
+    left: 15px;
+  }
+  
+  &__checkbox{
+    
+  }
+  
+  &__checkbox-btn{
+    
+  }
+  
+  &__radio-wrap{
+    
+  }
+  
+  &__radio{
+    
+  }
+  
+  &__radio-btn{
+    
+  }
+}
