@@ -56,6 +56,8 @@
     margin-bottom: 12px;
     text-align: center;
     align-self: center;
+    font-size: 16px;
+    color: $color-form-text;
   }
   
   &__checkbox input[type="checkbox"]{
@@ -67,10 +69,11 @@
     left: 0px;
     top: 0px;
     display: inline-block;
-    width: 20px;
-    height: 20px;
-    background: $color-form-checkbox;
-    border: none;
+    vertical-align: bottom;
+    width: 18px;
+    height: 18px;
+    background-color: $color-form-checkRadio;
+    border: 0.5px solid $color-main;
     border-radius: 3px;
     
     &::before,
@@ -78,25 +81,26 @@
       content: "";
       display: block;
       position: absolute;
-      background: #fff;
+      background-color: $color-main;
       border: none;
+      border-radius: 2px;
     }
     
     &::before{
       width: 3px;
-      height: 7px;
+      height: 6px;
       transform: rotate(-45deg);
-      left: 5px;
-      top: 8px;
+      left: 4.5px;
+      top: 6px;
       visibility: hidden;
     }
     
     &::after{
       width: 3px;
-      height: 11px;
+      height: 10px;
       transform: rotate(45deg);
-      left: 10px;
-      top: 4px;
+      left: 8.5px;
+      top: 3px;
       visibility: hidden;
     }
   }
@@ -106,15 +110,69 @@
     visibility: visible;
   }
   
+  &__text{
+    margin-bottom: 10px;
+    font-family: $ff-main-bold;
+    font-size: 16px;
+    color: $color-form-text;
+  }
+  
   &__radio-wrap{
-    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
   }
   
   &__radio{
+    display: inline-block;
+    position: relative;
+    padding-left: 18px;
+    margin-right: 30px;
+    font-size: 16px;
+    color: $color-form-text;
     
+    &:last-child{
+      margin-right: 0px;
+    }
+  }
+  
+  &__radio input[type="radio"]{
+    visibility: hidden;
   }
   
   &__radio-btn{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: $color-main;
+    border: none;
+    border-radius: 50%;
     
+    &::before{
+      content: "";
+      display: block;
+      position: absolute;
+      background-color: $color-form-checkRadio;
+      border: none;
+      width: 8px;
+      height: 8px;
+      left: 50%;
+      top: 50%;
+      margin-left: -4px;
+      margin-top: -4px;
+      border-radius: 50%;
+      visibility: hidden;
+    }
   }
+  
+  &__radio input[type="radio"]:checked+span::before{
+    visibility: visible;
+  }
+  
 }
