@@ -9,7 +9,8 @@ block content
       .hero__wrapper
         .hero__header
           +socials('basic', socials)
-          a(href = "#").toggle
+          a(href = "#").hero__toggle
+            +svg('hero__toggle-icon', 'hamburger')
         .hero__user-box
           .user
             .user__title

@@ -9,10 +9,12 @@ block content
       .hero__wrapper
         .hero__header
           +socials('basic', socials)
-          a(href = "#").toggle
-        .hero__user-box
+          a(href = "#").hero__toggle
+            +svg('hero__toggle-icon', 'hamburger')
+        .hero__stars
           include ../sections/_userBox.pug
-        a(href = "#").arrow_down
+        a(href = "#").arrow.arrow--down
+          +svg('arrow__icon', 'arrow_down')
     section.container.about
       .about__left
         svg.triangle.triangle--fill-beige
