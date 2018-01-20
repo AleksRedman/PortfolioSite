@@ -9,12 +9,8 @@
     padding-top: 15px;
     padding-left: 20px;
     padding-right: 20px;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    
+    height: 100vh;
+    position: relative;
   }
   
   &__header{
