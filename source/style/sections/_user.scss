@@ -16,7 +16,8 @@
   }
   
   &__name{
-    font-family: $ff-main;
+    font-family: $ff-main-titles;
+    letter-spacing: 1.3px;
     margin-bottom: 5px;
     font-size: 28px;
   }
