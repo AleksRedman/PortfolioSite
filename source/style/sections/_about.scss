@@ -1,0 +1,19 @@
+.about {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  
+  &__left{
+    width: 50%;
+    flex-grow: 1;
+    background-color: $color-about-left;
+    position: relative;
+  }
+  
+  &__right{
+    width: 50%;
+    flex-grow: 1;
+    background-color: $color-main;
+    position: relative;
+  }
+}
