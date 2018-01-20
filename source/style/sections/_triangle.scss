@@ -1,0 +1,16 @@
+.triangle{
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  top: -100px;
+  
+  &--fill-beige{
+    fill: $color-about-left;
+  }
+  
+  &--fill-white{
+    fill: $color-main;
+  }
+  
+  
+}
