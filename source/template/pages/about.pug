@@ -17,7 +17,12 @@ block content
           +svg('arrow__icon', 'arrow_down')
     section.container.about
       .about__left
-        svg.triangle.triangle--fill-beige
+        svg.triangle.triangle--fill-beige(
+          viewbox = "0, 0, 1000, 100" 
+          preserveAspectRatio = "none"
+          class = "triangle  triangle--fill-beige"
+        )
+          polygon(points = "0,0 0,100 1000,100")
         h1.title.about__title
           | Обо мне
         .user-about
@@ -29,7 +34,13 @@ block content
             p Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.
           
       .about__right
-        svg.triangle.triangle--fill-white
+        svg.triangle.triangle--fill-white(
+          viewbox = "0, 0, 1000, 100" 
+          preserveAspectRatio = "none"
+          class = "triangle  triangle--fill-beige"
+        )
+          polygon(points = "0,100 1000,100 1000,0")
+        h1.title.about__title
         .about-data
           .about-data__deskr
             h2.subtitle
