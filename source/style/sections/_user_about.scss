@@ -1,0 +1,32 @@
+.user-about{
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+  
+  &__photo{
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 39px;
+    border-radius: 15px;
+  }
+  
+  &__title{
+    color: $color-about-font;
+    margin-bottom: 30px;
+  }
+  
+  &__text{
+    color: $color-about-font;
+    text-align: left;
+    font-family: $ff-main;
+    font-style: 16px;
+  }
+  
+  &__text p{
+    padding: 0;
+    margin-bottom: 5px;
+    text-indent: 20px;
+  }
+}
