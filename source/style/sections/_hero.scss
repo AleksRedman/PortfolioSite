@@ -11,6 +11,12 @@
     padding-right: 20px;
     height: 100vh;
     position: relative;
+    
+    &--flex{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
   }
   
   &__header{
