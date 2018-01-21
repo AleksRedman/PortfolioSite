@@ -1,0 +1,26 @@
+.title{
+  display: block;
+  font-size: 63px;
+  line-height: 1.3;
+  font-family: $ff-main-titles;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  
+  
+  &::before{
+    display: block;
+    content: "";
+    position: absolute;
+    width: 185px;
+    height: 121px;
+    background-image: url(../img/stars__title.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 100%;
+    margin-left: -92px;
+    margin-top: -60px;
+    left: 50%;
+    top: 50%;
+  }
+}
