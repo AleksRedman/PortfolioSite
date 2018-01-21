@@ -23,14 +23,14 @@ block content
           class = "triangle  triangle--fill-beige"
         )
           polygon(points = "0,0 0,100 1000,100")
-        .about__wrapp
+        .about__wrap
           h1.title.about__title
             | Обо мне
           .user-about
-            .user_about__picture
-            h2.user_about__title.subtitle
-              | Кто я
-            .user_about__text
+            img.user-about__photo(src = "assets/img/about_photo.jpg" alt ="Photo")
+            h2.subtitle.user-about__title
+              | Кто я такой вам
+            .user-about__text
               p Я начинающий веб разработчик из Херсона. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
               p Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.
           
@@ -41,8 +41,7 @@ block content
           class = "triangle  triangle--fill-beige"
         )
           polygon(points = "0,100 1000,100 1000,0")
-        .about__wrapp
-          h1.title.about__title
+        .about__wrap
           .about-data
             .about-data__deskr
               h2.subtitle
