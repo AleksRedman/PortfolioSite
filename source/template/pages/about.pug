@@ -44,23 +44,21 @@ block content
         .about__wrap
           .about-data
             .about-data__deskr
-              h2.subtitle
+              h2.subtitle.about-data__title
                 | Чем я могу быть вам полезен
-              p.about-data__text
-                | Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+              p
+                | Больше всего меня привлекает Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
             .about-data__content
               ul.skills
                 each skill in skills
                   each skillsArray, skillName in skill
-                    li.skills__item
-                      .skill-section
-                        .skill-section__title= skillName
-                        ul.skill-section__list
-                          each skillTitle in skillsArray
-                            li.skills-section__item
-                              .skill
-                                svg.skill__circle
-                                .skill__name= skillTitle
+                    li.skills__group
+                      h3.skill__group-title= skillName
+                      ul.skills__list
+                        each skillTitle in skillsArray
+                          li.skills__item
+                            //svg.skills__skill-circle
+                            span.skills__skill-name= skillTitle
     section.container.map
       .contact-box
         .contact-box__title.subtitle
