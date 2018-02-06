@@ -1,12 +1,12 @@
-.footer
+section.container.footer
   .footer__data
-    .footer__section
+    .footer__section.footer__section--about
       p Лорем ипсум долор сит амет, но пер лаореет медиоцрем, ех сед цетеро яуаерендум, цоммодо мелиоре вис те.
     .footer__section
-      +nav('nav', navigation, 0, 4)
+      +nav('nav-footer', navigation, 0, 4)
       +socials('basic', socials)
     .footer__section
-      +contacts('footerContacts', contacts)
+      +contacts('footer-contacts', contacts)
   .footer__bottom
     .footer__copyrights
       include ./_copyright.pug

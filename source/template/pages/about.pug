@@ -53,7 +53,7 @@ block content
                 each skill in skills
                   each skillsArray, skillName in skill
                     li.skills__group
-                      h3.skill__group-title= skillName
+                      h3.skills__group-title= skillName
                       ul.skills__list
                         each skillCircle in skillsArray
                           li.skills__item
@@ -61,9 +61,10 @@ block content
                             svg.circle
                               circle(r ="45" cx = "50%" cy = "50%" fill = "none" class = "circle__first")
                               circle(r ="45" cx = "50%" cy = "50%" transform = "rotate(-90 55 55)" class = `circle__second circle-${skillCircle.percent}`)
-    section.container.map
-      .contact-box
-        .contact-box__title.subtitle
+    section.container.contacts
+      .map#map
+      .contacts__popup
+        .contacts__title.subtitle
           | Контакты
-        +contacts('contacts', contacts )
+        +contacts('contacts-block', contacts )
       include ../sections/_footer.pug
