@@ -1,12 +1,17 @@
 .skills{
-  
+  padding-bottom: 40px;
   
   &__group{
     display: block;
+    margin-bottom: 40px;
+    font-family: $ff-main-bold;
   }
   
   &__group-title{
-    margin-bottom: 19px;
+    display: block;
+    margin-bottom: 16px;
+    font-size: 28px;
+    
   }
   
   &__list{
@@ -25,8 +30,6 @@
     height: 110px;
     position: relative;
     margin-right: 25px;
-    
-    
   }
   
   &__skill-name{
@@ -35,5 +38,10 @@
     width: 100%;
     top: 40%;
     text-align: center;
+    padding-left: 26px;
+    padding-right: 26px;
+    color: $color-skills-name;
+    font-family: $ff-main;
+    font-size: 13px;
   }
 }
