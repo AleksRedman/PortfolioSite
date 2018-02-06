@@ -1,0 +1,12 @@
+.contacts{
+  position: relative;
+  margin-bottom: 10px;
+  
+  &__popup{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    width: 30%;
+    margin-left: -15%;
+  }
+}
