@@ -1,0 +1,29 @@
+.nav-footer{
+  
+  
+  &__list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin-bottom: 40px;
+  }
+  
+  &__item{
+    
+  }
+  
+  &__link{
+    color: $color-main;
+    font-family: $ff-main;
+    font-size: 16px;
+    display: block;
+    padding: 2px 5px;
+    border-radius: 10px;
+    transition: 0.2s;
+    
+    &:hover{
+      background-color: rgba($color-socials-user-block, .5);
+    }
+  }
+}

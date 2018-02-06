@@ -1,0 +1,25 @@
+.footer-contacts{
+  
+  &__item{
+    margin-bottom: 7px;
+  }
+  
+  &__link{
+    display: inline-block;
+    color: $color-footer-font;
+    font-size: 16px;
+    font-family: $ff-main-light;
+    padding-right: 5px;
+    padding-left: 5px;
+    transition: 0.4s;
+    
+    &:hover{
+      color: $color-main;
+      font-family: $ff-main;
+      background-color: rgba($color-nav-hover-user-block, .5);
+      border-radius: 10px;
+      letter-spacing: 1px;
+    }
+  }
+  
+}
