@@ -40,8 +40,11 @@
   }
   
   &__stars{
-    margin: 0 auto;
-    padding-top: 30px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -135px;
+    margin-left: -230px;
     width: 460px;
     min-height: 270px;
     background-image: url(../img/stars__hero.png);
@@ -62,5 +65,9 @@
     &:hover{
       background-color: transparentize($color-bg-opasity, .6);
     }
+  }
+  
+  &__footer{
+    padding-bottom: 30px;
   }
 }
