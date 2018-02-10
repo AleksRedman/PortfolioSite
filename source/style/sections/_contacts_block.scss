@@ -1,0 +1,59 @@
+.contacts-block{
+  
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: left;
+  
+  &__item{
+    width: 250px;
+    margin-bottom: 30px;
+    min-height: 45px;
+  }
+  
+  &__link{
+    display: inline-block;
+    padding-left: 55px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    color: $color-contacts-block-font;
+    font-family: $ff-main;
+    font-size: 17px;
+    padding-top: 9px;
+    
+    &::before{
+      display: block;
+      content: "";
+      position: absolute;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      top: 0px;
+      left: 0;
+      //background-color: $color-contacts-icons;
+      //background-repeat: no-repeat;
+      //background-position: top center;
+      //background-size: cover;
+    }
+    
+    
+    &--skp::before{
+      background-image: url("../img/icon_skype.png");
+    }
+    
+    &--tel::before{
+      background-image: url("../img/icon_phone.png");
+    }
+    
+    &--mail::before{
+      background-image: url("../img/icon_mail.png");
+    }
+    
+    &--gmap::before{
+      background-image: url("../img/icon_address.png");
+    }
+  }
+}
