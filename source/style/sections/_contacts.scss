@@ -1,12 +1,18 @@
 .contacts{
   position: relative;
   margin-bottom: 10px;
+  text-align: center;
   
   &__popup{
     position: absolute;
     top: 20%;
     left: 50%;
-    width: 30%;
-    margin-left: -15%;
+    width: 580px;
+    margin-left: -280px;
+  }
+  
+  &__title{
+    margin: 0 auto;
+    margin-bottom: 30px;
   }
 }
