@@ -2,6 +2,11 @@
   text-align: center;
   color: $color-main;
   
+  &__title{
+    font-family: $ff-main-titles;
+    font-size: 63px;
+  }
+  
   &__photo{
     border-radius: 50%;
     width: 142px;
