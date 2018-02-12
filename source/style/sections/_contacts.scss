@@ -9,6 +9,12 @@
     left: 50%;
     width: 580px;
     margin-left: -280px;
+    background-color: rgba($color-main, .8);
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 70px;
   }
   
   &__title{
