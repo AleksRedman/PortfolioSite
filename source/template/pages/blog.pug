@@ -6,21 +6,29 @@ block pageTitle
 block content
   .wrapper
     section.container.hero
-      .hero__wrapper
+      .hero__wrapper.hero__wrapper--flex
         .hero__header
           +socials('basic', socials)
           a(href = "#").hero__toggle
             +svg('hero__toggle-icon', 'hamburger')
         .hero__user-box
           .user
+            .user__photo
             .user__title
               | Мой Блог
             .user__descr
               | Здесь будут публиковаться интересные статьи из мира IT
-        .hero__footer
-          .hero__footer-head
-            svg.triangle.triangle--fill-white
-            svg.triangle.triangle--fill-white
+        .hero__triangles
+          svg.triangle.triangle--fill-blog(
+            viewbox = "0, 0, 1000, 100" 
+            preserveAspectRatio = "none"
+          )
+            polygon(points = "0,0 0,100 1000,100")
+          svg.triangle.triangle--fill-blog(
+            viewbox = "0, 0, 1000, 100" 
+            preserveAspectRatio = "none"
+          )
+            polygon(points = "0,100 1000,100 1000,0")
     section.container.blog
       .blog__wrapper
         aside.blog__nav
