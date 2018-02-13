@@ -30,11 +30,12 @@ block content
           )
             polygon(points = "0,100 1000,100 1000,0")
     section.container.blog
-      .blog__wrapper
+      .blog__wrap
         aside.blog__nav
           ul.blog__list
-            li.blog__items
-              a.blog__links(href = "#")
+            for item in articles
+              li.blog__items
+                a.blog__links(href =`#${item.id}`)= item.title
         main.blog__content
           +articles('articles', articles)
     section.container
