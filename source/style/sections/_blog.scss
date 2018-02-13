@@ -1,4 +1,40 @@
 .blog{
-  //background-color: $color-bg-blog;
   background-image: linear-gradient(to bottom,  $color-bg-blog 0%,#c1c6cf 100%);
+  padding-left: 10px;
+  padding-right: 10px;
+  
+  &__wrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+  }
+  
+  &__nav{
+    display: block;
+    min-width: 280px;
+    flex-grow: 1;
+  }
+  
+  &__list{
+    display: block;
+    width: 100%;
+  }
+  
+  &__item{
+    width: 100%;
+  }
+  
+  &__links{
+    display: block;
+    text-align: right;
+    
+    &:active{
+      border-right: 2px solid $color-contacts-icons;
+    }
+  }
+  &__content{
+    padding-left: 100px;
+    padding-right: 100px;
+  }
 }
