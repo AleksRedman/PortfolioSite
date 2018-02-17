@@ -1,5 +1,5 @@
 .blog{
-  background-image: linear-gradient(to bottom,  $color-bg-blog 0%,#c1c6cf 100%);
+  background-image: linear-gradient(to bottom,  $color-bg-blog 0%,#d4d3d3 100%);
   padding-left: 10px;
   padding-right: 10px;
   
@@ -7,7 +7,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    
+    padding-top: 100px;
   }
   
   &__nav{
@@ -28,6 +28,22 @@
   &__links{
     display: block;
     text-align: right;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: $color-blog-font;
+    font-family: $ff-main;
+    font-size: 16px;
+    transition: 0.5s;
+    
+    &:hover{
+      border-right: 2px solid $color-contacts-icons;
+      padding-right: 13px;
+      padding-left: 13px;
+      letter-spacing: 0.7px;
+      color: $color-blog-first-letter;
+    }
     
     &:active{
       border-right: 2px solid $color-contacts-icons;
@@ -36,5 +52,7 @@
   &__content{
     padding-left: 100px;
     padding-right: 100px;
+    font-family: $ff-main;
+    color: $color-blog-font;
   }
 }
