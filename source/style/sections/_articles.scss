@@ -1,0 +1,38 @@
+.articles{
+  
+  
+  
+  &__wrap{
+    border-bottom: 4px solid $color-blog-line;
+    margin-bottom: 65px;
+    padding-bottom: 45px;
+  }
+  
+  &__title{
+    font-family: $ff-main-titles;
+    font-size: 32px;
+    margin-bottom: 22px;
+  }
+  
+  &__date{
+    color: $color-blog-date;
+    margin-bottom: 22px;
+    display: inline-block;
+  }
+  
+  &__text{
+    text-align: justify;
+    line-height: 23px;
+  }
+  
+  &__text p{
+    text-indent: 35px;
+    margin-bottom: 10px;
+    
+    &:first-letter{
+      color: $color-blog-first-letter;
+      font-size: 22px;
+      letter-spacing: 0.7px;
+    }
+  }
+}
