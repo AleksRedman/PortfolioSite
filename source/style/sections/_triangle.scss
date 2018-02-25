@@ -20,4 +20,9 @@
     fill: $color-bg-blog;
     width: 50%;
   }
+  
+  &--fill-black{
+    fill: rgba($color-footer-triangles, .8);
+    width: 50%;
+  }
 }
