@@ -1,6 +1,5 @@
 .arrow {
-  display: block;
-  
+  display: inline-block;
   
   &--down{
     position: absolute;
@@ -10,9 +9,18 @@
     z-index: 10;
   }
   
+  &--norm-pos{
+    display: inline-block;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    text-align: center;
+    z-index: 100;
+  }
+  
   &__icon{
     width: 28px;
     height: 16px;
     fill: $color-main;
+    margin: 0 auto;
   }
 }
