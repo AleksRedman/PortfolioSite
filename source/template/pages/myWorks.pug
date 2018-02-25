@@ -5,22 +5,35 @@ block pageTitle
 
 block content
   .wrapper
-    section.container.hero
-      .hero__wrapper
+    section.container.hero.hero--flex
+      .hero__wrapper.hero__wrapper--flex
         .hero__header
           +socials('basic', socials)
           a(href = "#").hero__toggle
             +svg('hero__toggle-icon', 'hamburger')
-        .hero__stars
-          include ../sections/_userBox.pug
-        a(href = "#").arrow.arrow--down.arrow
+        .hero__user-box
+          .user
+            .user__photo
+            .user__title.user__title--smaller
+              | Патрушев Алексей
+            .user__descr
+              | Личный сайт веб разработчика
+        a(href = "#").arrow.arrow--norm-pos
           +svg('arrow__icon', 'arrow_down')
-        .hero__footer
-          .hero__footer-head
-            svg.triangle.triangle--fill-black
-            svg.triangle.triangle--fill-black
-          .hero__title-wrap
-            h1.section-title Мои работы
+      .footer-triangles
+        .footer-triangles__head
+          svg.triangle.triangle--fill-black(
+            viewbox = "0, 0, 1000, 100" 
+            preserveAspectRatio = "none"
+          )
+            polygon(points = "0,0 0,100 1000,100")
+          svg.triangle.triangle--fill-black(
+            viewbox = "0, 0, 1000, 100" 
+            preserveAspectRatio = "none"
+          )
+            polygon(points = "0,100 1000,100 1000,0")
+        .footer-triangles__title-wrap
+          h1.title.footer-triangles__title Мои работы
     section.container.works
       .works__wraper
         .works__data
