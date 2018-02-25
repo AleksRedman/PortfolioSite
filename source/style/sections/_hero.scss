@@ -1,20 +1,29 @@
 .hero{
+  background-image: url(../img/bg_hero.jpg);
+  background-color: $color-hero-bg;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  min-height: 100vh;
+  
+  &--flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
   
   &__wrapper{
-    background-image: url(../img/bg_hero.png);
-    background-color: $color-hero-bg;
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: cover;
-    padding-top: 15px;
     
-    height: 100vh;
+    padding-top: 15px;
     position: relative;
+    min-height: 100vh;
     
     &--flex{
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      flex-grow: 1;
+      min-height: 100%;
     }
   }
   
@@ -43,7 +52,7 @@
   &__stars{
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 40%;
     margin-top: -135px;
     margin-left: -230px;
     width: 460px;
