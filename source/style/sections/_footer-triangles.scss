@@ -1,0 +1,43 @@
+.footer-triangles{
+  min-height: 150px;
+  position: relative;
+  background-color: rgba($color-footer-triangles, .8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  &__head{
+    width: 100%;
+    position: absolute;
+    top: -100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  
+  &__title-wrap{
+    max-width: 50%;
+    margin: 0 auto;
+    
+    &:before{
+      display: block;
+      content: "";
+      position: absolute;
+      width: 185px;
+      height: 121px;
+      background-image: url(../img/stars_title2.png);
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: 100%;
+      margin-left: -92px;
+      margin-top: -60px;
+      left: 50%;
+      top: 50%;
+    }
+  }
+  
+  &__title{
+    color: $color-main;
+  }
+}
