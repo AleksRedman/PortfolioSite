@@ -5,6 +5,10 @@
   &__title{
     font-family: $ff-main-titles;
     font-size: 63px;
+    
+    &--smaller{
+      font-size: 36px;
+    }
   }
   
   &__photo{
